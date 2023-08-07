@@ -1,0 +1,23 @@
+{
+  "autoshopen": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-autoshop-autoshopen-13604-authRole",
+      "UnauthRoleArn": "arn:aws:iam::083385831257:role/amplify-autoshop-autoshopen-13604-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::083385831257:role/amplify-autoshop-autoshopen-13604-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-autoshop-autoshopen-13604-deployment",
+      "UnauthRoleName": "amplify-autoshop-autoshopen-13604-unauthRole",
+      "StackName": "amplify-autoshop-autoshopen-13604",
+      "StackId": "arn:aws:cloudformation:us-east-2:083385831257:stack/amplify-autoshop-autoshopen-13604/bff6abc0-2cde-11ee-b3e6-0a960f9cb7bf",
+      "AmplifyAppId": "d2ofu6jr90hgbn"
+    },
+    "categories": {
+      "auth": {
+        "autoshop5c2dda45": {}
+      },
+      "api": {
+        "amplifyDatasource": {}
+      }
+    }
+  }
+}
