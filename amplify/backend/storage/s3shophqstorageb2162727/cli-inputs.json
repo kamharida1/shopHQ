@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3shophqstorageb2162727",
+  "bucketName": "shophq-storage-b2162727",
+  "policyUUID": "7e5324af",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

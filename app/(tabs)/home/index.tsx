@@ -9,22 +9,19 @@ import { useProductStore } from '@/contexts/useProductStore';
 import { useMemo } from 'react';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { FlatList } from 'react-native-gesture-handler';
-import ProductItemCard from '@/components/cards/product_item';
 import { BlurView } from 'expo-blur';
 import { Space } from '@/components/space/re_space';
 import PriceWithNairaSymbol from '@/components/price_with_naira';
+import Animated from 'react-native-reanimated';
+
+const AnimatedImagebackground =
+  Animated.createAnimatedComponent(ImageBackground);
+const AnimatedPressable = Animated.createAnimatedComponent(Pressable)
+
 
 const ProductItem = ({ item }: { item: any }) => (
-  <Link
-    href={{
-      pathname: "/(tabs)/home/[product]",
-      params: {
-        product: item.id,
-      },
-    }}
-    asChild
-  >
-    <Pressable
+  <Link href={`/(tabs)/home/${item.id}`} asChild>
+    <AnimatedPressable
       style={{
         width: "45%",
         aspectRatio: 1,
@@ -32,11 +29,13 @@ const ProductItem = ({ item }: { item: any }) => (
         borderRadius: 10,
         overflow: "hidden",
       }}
+      sharedTransitionTag={`container_${item.id}`}
     >
       {({ hovered, pressed }) => (
-        <ImageBackground
-          source={{ uri: item.images[0]}}
+        <AnimatedImagebackground
+          source={{ uri: item.images[0] }}
           style={{ flex: 1, justifyContent: "flex-end" }}
+          sharedTransitionTag={`image_${item.id}`}
         >
           <BlurView style={tw.style(`p-2`)} intensity={50} tint="dark">
             <Text style={tw`text-white font-semibold`}>{item.title}</Text>
@@ -46,9 +45,9 @@ const ProductItem = ({ item }: { item: any }) => (
               price={item.price}
             />
           </BlurView>
-        </ImageBackground>
+        </AnimatedImagebackground>
       )}
-    </Pressable>
+    </AnimatedPressable>
   </Link>
 );
 
@@ -90,6 +89,7 @@ function ProductsList() {
   const { width } = useWindowDimensions();
   const innerWindow = width - 48;
   const insets = useSafeAreaInsets();
+
   return (
     <FlatList
       contentInsetAdjustmentBehavior="automatic"
@@ -98,6 +98,7 @@ function ProductsList() {
       renderItem={({ item }) => <ProductItem item={item} />}
       keyExtractor={(item) => item.title}
       numColumns={2}
+      ListEmptyComponent={ListEmptyComponent}
     />
   );
 };

@@ -1,22 +1,25 @@
 {
-  "autoshopen": {
+  "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-autoshop-autoshopen-13604-authRole",
-      "UnauthRoleArn": "arn:aws:iam::083385831257:role/amplify-autoshop-autoshopen-13604-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::083385831257:role/amplify-autoshop-autoshopen-13604-authRole",
+      "AuthRoleName": "amplify-shophq-dev-34926-authRole",
+      "UnauthRoleArn": "arn:aws:iam::083385831257:role/amplify-shophq-dev-34926-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::083385831257:role/amplify-shophq-dev-34926-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-autoshop-autoshopen-13604-deployment",
-      "UnauthRoleName": "amplify-autoshop-autoshopen-13604-unauthRole",
-      "StackName": "amplify-autoshop-autoshopen-13604",
-      "StackId": "arn:aws:cloudformation:us-east-2:083385831257:stack/amplify-autoshop-autoshopen-13604/bff6abc0-2cde-11ee-b3e6-0a960f9cb7bf",
-      "AmplifyAppId": "d2ofu6jr90hgbn"
+      "DeploymentBucketName": "amplify-shophq-dev-34926-deployment",
+      "UnauthRoleName": "amplify-shophq-dev-34926-unauthRole",
+      "StackName": "amplify-shophq-dev-34926",
+      "StackId": "arn:aws:cloudformation:us-east-2:083385831257:stack/amplify-shophq-dev-34926/343eee10-3596-11ee-9a63-02cea2238d4d",
+      "AmplifyAppId": "d23kj4qc4akukh"
     },
     "categories": {
-      "auth": {
-        "autoshop5c2dda45": {}
-      },
       "api": {
-        "amplifyDatasource": {}
+        "shophq": {}
+      },
+      "auth": {
+        "shopHQ": {}
+      },
+      "storage": {
+        "s3shophqstorageb2162727": {}
       }
     }
   }

@@ -14,7 +14,7 @@ type EagerProduct = {
   readonly id: string;
   readonly title: string;
   readonly description?: string | null;
-  readonly image: string;
+  readonly image?: string | null;
   readonly images: string[];
   readonly options?: string[] | null;
   readonly category?: string | null;
@@ -35,7 +35,7 @@ type LazyProduct = {
   readonly id: string;
   readonly title: string;
   readonly description?: string | null;
-  readonly image: string;
+  readonly image?: string | null;
   readonly images: string[];
   readonly options?: string[] | null;
   readonly category?: string | null;

@@ -145,7 +145,9 @@ export const useProductStore = () => {
   return {
     products,
     isLoading,
+    setIsLoading,
     error,
+    setError,
     singleData,
     fetchData,
     fetchSingleProduct,
